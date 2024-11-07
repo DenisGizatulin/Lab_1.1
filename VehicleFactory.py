@@ -1,5 +1,5 @@
 from classes import Vehicle, Car, Truck, Bus, Bicycle, Motorcycle, MetroTrain, Train, Ship, Plane
-from exceptions import InvalidVehicleTypeException, InvalidCapacityException
+from exceptions import InvalidVehicleTypeException
 import json
 import xml.etree.ElementTree as ET
 
