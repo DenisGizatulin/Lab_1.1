@@ -6,8 +6,8 @@ class Vehicle: # Создан базовый класс транспорта
     def start(self) -> None:
         print(f"{self._name} Двигается.")
 
-    def info(self) -> None:
-        print(f"Название: {self._name}, Вместимость: {self.capacity} единиц")
+    def info(self) -> str:
+        return f"Название: {self.name}, Вместимость: {self.capacity} единиц"
 
     def to_dict(self):
         return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
