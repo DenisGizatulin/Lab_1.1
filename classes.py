@@ -9,67 +9,77 @@ class Vehicle: # Создан базовый класс транспорта
     def info(self) -> None:
         print(f"Название: {self._name}, Вместимость: {self.capacity} единиц")
 
-    @property # Добавлен декоратор для того, чтобы name стал свойством и была возможность установки значения этого поля сеттером
-    def name(self) -> str:
-        return self._name
-
-    @name.setter # Сеттер для установки имени
-    def name(self, name) -> None:
-        if not isinstance(name, str):
-            raise ValueError("Название должно быть строкой!")
-        self._name = name
-
-    @property # Аналогичный декоратор
-    def capacity(self) -> int:
-        return self._capacity
-
-    @capacity.setter # Аналогичный сеттер
-    def age(self, capacity) -> None:
-        if not isinstance(capacity, int):
-            raise ValueError("")
-        self._capacity = capacity
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
 
 
 class Car(Vehicle): # Далее идут наследованные от Vehicle классы
     def activate(self) -> None:
         print(f"{self._name} едет по дороге")
 
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
+
 
 class Truck(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} едет по дороге")
+
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
 
 
 class Bus(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} едет по автобусной полосе")
 
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
+
 
 class Bicycle(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} едет по тротуару")
+
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
 
 
 class Motorcycle(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} едет по дороге")
 
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
+
 
 class MetroTrain(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} едет под землёй")
+
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
 
 
 class Train(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} едет по ЖД")
 
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
+
 
 class Ship(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} плывёт по морю")
 
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
+
 
 class Plane(Vehicle):
     def activate(self) -> None:
         print(f"{self._name} летит по небу")
+
+    def to_dict(self):
+        return {'type': self.__class__.__name__, 'name': self.name, 'capacity': self.capacity}
