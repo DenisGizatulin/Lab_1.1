@@ -21,7 +21,7 @@ class VehicleFactory:
         if vehicle_type not in VehicleFactory.vehicles:
             raise InvalidVehicleTypeException(vehicle_type)
         if capacity <= 0:
-            raise InvalidCapacityException(capacity)
+            raise ValueError(f"Неверное значение вместимости: {capacity}. Вместимость должна быть больше 0. ")
         return VehicleFactory.vehicles[vehicle_type](name, capacity)
 
     @staticmethod
