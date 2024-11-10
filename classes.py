@@ -4,7 +4,7 @@ class Vehicle:  # Создан базовый класс транспорта
         self.capacity = capacity
 
     def start(self) -> None:
-        print(f"{self._name} Двигается.")
+        print(f"{self.name} Двигается.")
 
     def info(self) -> str:
         return f"Название: {self.name}, Вместимость: {self.capacity} единиц"
@@ -19,7 +19,7 @@ class Vehicle:  # Создан базовый класс транспорта
 
 class Car(Vehicle):  # Далее идут наследованные от Vehicle классы
     def activate(self) -> None:
-        print(f"{self._name} едет по дороге")
+        print(f"{self.name} едет по дороге")
 
     def to_dict(self):
         return {
@@ -31,7 +31,7 @@ class Car(Vehicle):  # Далее идут наследованные от Vehic
 
 class Truck(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} едет по дороге")
+        print(f"{self.name} едет по дороге")
 
     def to_dict(self):
         return {
@@ -43,7 +43,7 @@ class Truck(Vehicle):
 
 class Bus(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} едет по автобусной полосе")
+        print(f"{self.name} едет по автобусной полосе")
 
     def to_dict(self):
         return {
@@ -55,7 +55,7 @@ class Bus(Vehicle):
 
 class Bicycle(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} едет по тротуару")
+        print(f"{self.name} едет по тротуару")
 
     def to_dict(self):
         return {
@@ -67,7 +67,7 @@ class Bicycle(Vehicle):
 
 class Motorcycle(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} едет по дороге")
+        print(f"{self.name} едет по дороге")
 
     def to_dict(self):
         return {
@@ -79,7 +79,7 @@ class Motorcycle(Vehicle):
 
 class MetroTrain(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} едет под землёй")
+        print(f"{self.name} едет под землёй")
 
     def to_dict(self):
         return {
@@ -91,7 +91,7 @@ class MetroTrain(Vehicle):
 
 class Train(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} едет по ЖД")
+        print(f"{self.name} едет по ЖД")
 
     def to_dict(self):
         return {
@@ -103,7 +103,7 @@ class Train(Vehicle):
 
 class Ship(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} плывёт по морю")
+        print(f"{self.name} плывёт по морю")
 
     def to_dict(self):
         return {
@@ -115,7 +115,7 @@ class Ship(Vehicle):
 
 class Plane(Vehicle):
     def activate(self) -> None:
-        print(f"{self._name} летит по небу")
+        print(f"{self.name} летит по небу")
 
     def to_dict(self):
         return {
