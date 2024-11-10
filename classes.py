@@ -3,7 +3,7 @@ class Vehicle:  # Создан базовый класс транспорта
         self.name = name
         self.capacity = capacity
 
-    def start(self) -> None:
+    def activate(self) -> None:
         print(f"{self.name} Двигается.")
 
     def info(self) -> str:
