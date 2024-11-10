@@ -23,7 +23,7 @@ def main():
 
         if choice == "1":
             vehicle_type = input(
-                "Введите тип транспорта (Car, Bus, Bicycle, Plane, Truck, Ship, Train, MetroTrain, Motorcycle): "
+                "Введите тип транспорта (Car, Bus, Bicycle, Plane, Truck, Ship, Train, MetroTrain, Motorcycle.): "
             )
             model = input("Введите название транспорта: ")
             capacity = int(input("Введите вместимость: "))
