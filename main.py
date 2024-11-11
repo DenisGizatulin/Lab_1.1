@@ -7,9 +7,9 @@ import xml.etree.ElementTree as ET
 def display_menu():
     print("1. Добавить транспорт")
     print("2. Сохранить транспортные средства в файл json")
-    print("3. Выгрузить транспортные средства из файла json")
+    print("3. Загрузить транспортные средства из файла json")
     print("4. Сохранить транспортные средства в файл xml")
-    print("5. Выгрузить транспортные средства из файла xml")
+    print("5. Загрузить транспортные средства из файла xml")
     print("6. Вывести на экран текущие транспортные средства")
     print("0. Выход")
 
@@ -43,7 +43,7 @@ def main():
 
         elif choice == "3":
             filename = input(
-                "Введите название файла из которого выгрузить транспорт (напр.: vehicles.json): "
+                "Введите название файла из которого загрузить транспорт (напр.: vehicles.json): "
             )
             try:
                 loaded_vehicles = VehicleFactory.load_from_json(filename)
@@ -63,7 +63,7 @@ def main():
 
         elif choice == "5":
             filename = input(
-                "Введите название файла из которого выгрузить транспорт (напр.: vehicles.xml): "
+                "Введите название файла из которого загрузить транспорт (напр.: vehicles.xml): "
             )
             try:
                 loaded_vehicles = VehicleFactory.load_from_xml(filename)
